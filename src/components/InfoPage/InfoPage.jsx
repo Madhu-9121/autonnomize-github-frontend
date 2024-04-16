@@ -1,8 +1,11 @@
 import React from 'react'
 
-const InfoPage = () => {
+const InfoPage = ({repo}) => {
   return (
-    <div>InfoPage</div>
+    <div>
+        
+
+    </div>
   )
 }
 
