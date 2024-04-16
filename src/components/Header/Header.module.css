@@ -1,0 +1,25 @@
+.parent{
+    color: white;
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+    
+    background-color: rgb(18, 9, 48);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center; 
+    
+
+
+}
+.logo{
+    width: 90px;
+    height: 90px;
+    background-image: url('../../assets/logo.png');
+    border: 0.1px solid white;
+    border-radius: 50%;
+    background-size: 180%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 100px;
+}

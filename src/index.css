@@ -1,13 +1,36 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  
+  --black-color: #121212;
+  --white-color:#fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+*{
+  margin:0;
+}
+html,body{
+  
+  height: 100%;
+}
+body{
+  font-family: 'Inter;',sans-serif  ;
+  background-color: white;
+  line-height: 1.5;
+  color:var(--black-color);
+  overflow-x: hidden;
+  
+}
+.slick-prev:before,
+.slick-next:before
+{
+
+    color: black !important;
+
+}
+.productCard_title__Ralsj{
+  color: #121212 !important;
 }
