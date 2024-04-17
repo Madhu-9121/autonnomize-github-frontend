@@ -1,0 +1,24 @@
+.goback{
+    width: 150px;
+    /* padding: 10px;    */
+    height: 40px;
+    color: black;
+    font-size: 20px;
+    border: 1px solid black;
+    background-color: rgb(241, 232, 247);
+    border-radius: 5px;
+    margin: 20px 0px;
+    cursor: pointer;
+    position: fixed;
+    top: 160px;
+    left: 100px;
+
+}
+.cardsParent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow-y: scroll;
+}

@@ -3,7 +3,9 @@ import styles from "./Header.module.css";
 
 const Header = ({accountName,user,setUser,handleSearch}) => {
     // const [accountName,setAccountName] = useState('User Name')
-   
+//    const handleClick=()=>{
+
+//    }
   return (
     <div className={styles.parent}>
       <div className={styles.l}><h2>Github<br/> Explorer</h2></div>
