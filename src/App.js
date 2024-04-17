@@ -1,16 +1,17 @@
 import react, { useState, useEffect } from "react";
 import HomePage from "./components/HomePage/HomePage";
-import InfoPage from "./components/InfoPage/InfoPage";
 import Header from "./components/Header/Header";
 import "./App.css";  
 import config from "./config.json";
 // console.log(config.host)
 function App() {
-  const [user, setUser] = useState("katharina");
+  const [user, setUser] = useState("");
   const [accountName, setAccountName] = useState("");
   const [repos, setRepos] = useState([]);
   const [showRepos,setShowRepos] =useState(false)
+  const [loading,setLoading] = useState(false)
   const handleSearch = async () => {
+    setLoading(true)
     if (user) {
       try {
         const res = await fetch(`${config.host}/save-user/${user}`);
@@ -25,6 +26,8 @@ function App() {
         console.log(e);
       }
     }
+    setLoading(false)
+    
   };
 
   return (
@@ -39,6 +42,8 @@ function App() {
         {accountName && setShowRepos  ? (
           <HomePage repos={repos} userName={user} />
         ) : (
+          <>
+          {loading ? <h3>Loading ...</h3>:
           <div className="inputBarDiv">
             <div className="common">
               <input
@@ -51,9 +56,10 @@ function App() {
                 Search
               </button>
             </div>
-          </div>
+          </div>}
+          </>
+          
         )}
-        {/* :<InfoPage/>} */}
       </div>
     </div>
   );
